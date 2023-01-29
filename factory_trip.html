@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="농심, 농심 모바일홈페이지">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="농심">
+    <meta property="og:url" content="http://knom1224.dothome.co.kr/mNongshim">
+    <meta property="og:image" content="http://knom1224.dothome.co.kr/mNongshim/og.png">
+    <meta property="og:description" content="라이카 카메라 코리아">
+    <title>농심 | 모바일</title>
+    <link rel="shortcut icon" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>">
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=087f96afdd4916ee11707da0adacb075"></script>
+    <script src="js/map.js?v=<?php echo time(); ?>"></script>
+    <script src="js/ui_common.js?v=<?php echo time(); ?>"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h1 class="logo"><a href="index.html"><img src="images/logo.png" alt="농심로고"></a></h1>
+            <ul class="util">
+                <li>
+                    <a href="#" class="btn_search">검색영역 열기</a>
+                    <!-- 검색영역 -->
+                    <div class="search_zone">
+                        <form>
+                            <input type="text" placeholder="검색어를 입력해주세요">
+                            <button type="button" class="btn_search">검색버튼</button>
+                            <button type="button" class="btn_close">닫기버튼</button>
+                        </form>
+                    </div>
+                    <!-- // 검색영역 -->
+                </li>
+                <li><a href="#nav" class="btn_menu">GNB 메뉴 열기</a></li>
+            </ul>
+            <nav id="nav">
+                <div class="top_nav">
+                    <a href="login.html" class="btn_login">로그인 해주세요</a>
+                    <a href="#" class="btn_close">nav 닫기</a>
+                </div>
+                <div class="nav_banner">
+                    <a href="#">
+                        <img src="images/nav_event_banner.png" alt="농심 55주년 기념이벤트">
+                    </a>
+                </div>
+                <!-- gnb 영역 -->
+                <ul class="gnb">
+                    <li>
+                        <a href="#">농심소개</a>
+                        <ul class="depth2">
+                            <li>
+                                <a href="#">OVERVIEW</a>
+                                <a href="#">경영이념</a>
+                                <a href="#">연혁</a>
+                                <a href="#">세계속의 농심</a>
+                                <a href="#">CI소개</a>
+                                <a href="#">농심그룹</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">지속가능경영</a>
+                        <ul class="depth2">
+                            <li>
+                                <a href="#">OVERVIEW</a>
+                                <a href="#">사회공헌</a>
+                                <a href="#">환경ㆍ안전</a>
+                                <a href="#">동반성장</a>
+                                <a href="#">준법경영</a>
+                                <a href="#">소비자중심경영</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">홍보센터</a>
+                        <ul class="depth2">
+                            <li>
+                                <a href="#">OVERVIEW</a>
+                                <a href="#">농시미 이벤트</a>
+                                <a href="#">농심 소식</a>
+                                <a href="#">사보 (N:ZIN)</a>
+                                <a href="#">농심 TV</a>
+                                <a href="#">N.서포터즈</a>
+                                <a href="#">라면피디아</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">투자정보</a>
+                        <ul class="depth2">
+                            <li>
+                                <a href="#">OVERVIEW</a>
+                                <a href="#">주식에 관한 사항</a>
+                                <a href="#">주가정보</a>
+                                <a href="#">동반성장</a>
+                                <a href="#">준법경영</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="servicecenter.html">고객지원</a>
+                        <ul class="depth2">
+                            <li>
+                                <a href="servicecenter.html">OVERVIEW</a>
+                                <a href="#">상담접수</a>
+                                <a href="#">자주 묻는 질문</a>
+                                <a href="factory_trip.html">공장견학</a>
+                                <a href="#">오시는길</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="btn_wrap">
+                    <a href="login.html" class="btn_mypage">마이페이지</a>
+                    <a href="#" class="btn_nlive">N.LIVE</a>
+                </div>
+                <ul class="lang">
+                    <li class="active"><a href="#">한국어</a></li>
+                    <li><a href="#">ENGLISH</a></li>
+                    <li><a href="#">Japanese</a></li>
+                    <li><a href="#">Chinese</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="container" class="sub_container factory_trip_container">
+            <div class="sub_visual">
+                <div class="tit_wrap">
+                    <h2>공장견학</h2>
+                </div>
+            </div>
+            <!-- 견학정보 -->
+            <div class="contents factory_info">
+                <h2 class="sub_tit">견학정보</h2>
+                <!-- top 견학정보 -->
+                <ul class="factory_info_list">
+                    <li>
+                        <div class="txt_wrap">
+                            <h3 class="list_tit">대상자</h3>
+                            <p class="list_txt">
+                                12세(초등학교 5학년)이상 ~ 65세 미만<br>
+                                단체 견학만 가능 (20명 ~ 45명)<br>
+                                홈페이지접수만 가능
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="txt_wrap">
+                            <h3 class="list_tit">소요시간</h3>
+                            <p class="list_txt">
+                                일반 견학: 약 1시간<br>
+                                체험 견학: 약 2시간
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="txt_wrap factory_time">
+                            <h3 class="list_tit">견학가능시간</h3>
+                            <span>체험 견학
+                                <p class="time">오전 09:00 ~ 11:30<br>
+                                    오후 13:30 ~ 16:00</p>
+                            </span>
+                            <span>일반 견학
+                                <p class="time">오전 09:00 ~ 11:30<br>
+                                    오후 13:30 ~ 16:00</p>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon_img"></div>
+                        <div class="txt_wrap">
+                            <h3 class="list_tit">차량 가능지역</h3>
+                            <p class="list_txt">
+                                왕복 50km/30분이내 거리만<br>
+                                차량지원 가능
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon_img"></div>
+                        <div class="txt_wrap">
+                            <h3 class="list_tit">주차안내</h3>
+                            <p class="list_txt">
+                                주차비 무료
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon_img"></div>
+                        <div class="txt_wrap">
+                            <h3 class="list_tit">문의</h3>
+                            <p class="list_txt">
+                                1500-0000<br>
+                                admin@nongshim.com<br>
+                                홈페이지: 고객센터에서도 문의 가능
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <!-- // top 견학정보 -->
+                <!-- 견학정보 유의사항 -->
+                <div class="factory_caution">
+                    <div class="txt_wrap">
+                        <h3>견학 시 유의사항</h3>
+                        <p>
+                            견학 신청은 방문일 전일 오후 3시까지 예약 가능합니다.<br>
+                            <strong class="red">매월 9일 추첨(토요일/휴일일 경우 익일)</strong><br>
+                            선정되신 분들에게 문자/메일로 개별 연락<br>
+                            ※ 동일단체는 월 1회 방문으로 제한이 되고, 1회 이상 신청시 자동 취소됨<br>
+                            <br>
+                            방문 견학의 경우,<br>
+                            식사가 제공되지 않으며, 만 19세 미만 견학 시 보호자를 반드시 동반하여야 합니다.<br>
+                            예약시간보다 늦으시거나 6세 미만 유아 동반 시 견학이 제한되오니, 이점 참고 바랍니다.<br>
+                            <br>
+                            견학 시간의 경우,<br>
+                            <strong class="red">평일 (공휴일 제외)에 한해서만 가능합니다.</strong>
+                        </p>
+                    </div>
+                    <div class="img_wrap">
+                        <img src="images/factory_trip/factory_mascot.png" alt="공장견학 시 유의사항">
+                    </div>
+                </div>
+                <!-- // 견학정보 유의사항 -->
+            </div>
+            <!-- 공장 지도 -->
+            <div class="map_wrap">
+                <h2 class="sub_tit">오시는길</h2>
+                <select name="factory_list" id="factoryList">
+                    <option value="anyang">안양공장</option>
+                    <option value="ansung">안성공장</option>
+                    <option value="asan">아산공장</option>
+                    <option value="gumi">구미공장</option>
+                    <option value="busan">부산공장</option>
+                    <option value="noksan">녹산공장</option>
+                </select>
+                <div id="map" class="all_map">
+                    <div class="info_window">
+                        <div class="txt_wrap">
+                            <h3>안양공장</h3>
+                            <p><strong>공장주소</strong>경기도 군포시 농심로 35 (당정동)</p>
+                            <p><strong>대표번호<br></strong>031-450-5500</p>
+                            <p><strong>견학문의<br></strong>031-450-5500</p>
+                            <!-- <a href="#" target="_blank" class="btn_map">공장 지도 새 창 보기</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div id="map2" class="all_map">
+                    <div class="info_window">
+                        <div class="txt_wrap">
+                            <h3>안성공장</h3>
+                            <p><strong>공장주소</strong>경기도 안성시 공단로 28 (신소현동)</p>
+                            <p><strong>대표번호<br></strong>031-8046-6500</p>
+                            <p><strong>견학문의<br></strong>031-8046-6500</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="map3" class="all_map">
+                    <div class="info_window">
+                        <div class="txt_wrap">
+                            <h3>아산공장</h3>
+                            <p><strong>공장주소</strong>충남 아산시 탕정면 탕정면로 485</p>
+                            <p><strong>대표번호<br></strong>041-540-4700</p>
+                            <p><strong>견학문의<br></strong>041-540-4713</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="map4" class="all_map">
+                    <div class="info_window">
+                        <div class="txt_wrap">
+                            <h3>구미공장</h3>
+                            <p><strong>공장주소</strong>경북 구미시 1공단로7길 58-11 (공단동)</p>
+                            <p><strong>대표번호<br></strong>054-469-5000</p>
+                            <p><strong>견학문의<br></strong>054-469-5023</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="map5" class="all_map">
+                    <div class="info_window">
+                        <div class="txt_wrap">
+                            <h3>부산공장</h3>
+                            <p><strong>공장주소</strong>부산광역시 사상구 사상로455번길 46 (모라동)</p>
+                            <p><strong>대표번호<br></strong>051-366-5300</p>
+                            <p><strong>견학문의<br></strong>051-366-5326</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="map6" class="all_map">
+                    <div class="info_window">
+                        <div class="txt_wrap">
+                            <h3>녹산공장</h3>
+                            <p><strong>공장주소</strong>부산광역시 강서구 녹산산단261로 73번길 48 (송정동)</p>
+                            <p><strong>대표번호<br></strong>051-329-4100</p>
+                            <p><strong>견학문의<br></strong>051-329-4100</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //공장 지도 -->
+            <!-- 공장FAQ -->
+            <div class="factory_faq">
+                <h2 class="sub_tit">견학 FAQ</h2>
+                <ul class="factory_faq_list">
+                    <li>
+                        <a href="#">[견학] 견학 신청전에 전화로 문의를 드리고 싶은데 어디로 해야하나요?</a>
+                        <div class="factory_answer">
+                            <h4>[견학] 견학 신청전에 전화로 문의를 드리고 싶은데 어디로 해야하나요?</h4>
+                            <p>견학을 원하시는 공장에 전화로 문의하셔서 일정 확인 부탁드리겠습니다.<br>
+                            <br>
+                            안양공장 031)450-5515<br>
+                            안성공장 031)8046-6515<br>
+                            아산공장 041)540-4713<br>
+                            구미공장 054)469-5017<br>
+                            부산공장 051)366-5326<br>
+                            홍보팀 02)820-7578</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">[견학] 차량지원, 식사제공 가능한가요?</a>
+                        <div class="factory_answer">
+                            <h4>[견학] 차량지원, 식사제공 가능한가요?</h4>
+                            <p>견학을 원하시는 공장에 전화로 문의하셔서 일정 확인 부탁드리겠습니다.<br>
+                            <br>
+                            별도의 차량과 식사는 제공되지 않으며 견학 인원수에 맞춰 소정의 기념품이 제공됩니다. 버스 외 교통수단(승용/승합차)은 담당자와 별도 협의 부탁드립니다.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">[견학] 견학은 신청하면 다 갈 수 있나요?</a>
+                        <div class="factory_answer">
+                            <h4>[견학] 견학은 신청하면 다 갈 수 있나요?</h4>
+                            <p>공장 견학 신청은 매달 1~4일 농심 홈페이지 [홍보센터] > [공장견학] > [견학신청] 에서 로그인 후 신청하실 수 있습니다. 신청자들을 대상으로 추첨을 통해 선정하고 있습니다.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">[견학] 토요일, 일요일에도 견학을 갈 수 있나요?</a>
+                        <div class="factory_answer">
+                            <h4>[견학] 토요일, 일요일에도 견학을 갈 수 있나요?</h4>
+                            <p>견학 가능 공장은 안양, 안성, 아산, 구미, 부산 공장이며 견학은 평일 (공휴일 제외)만 가능합니다.</p>
+                        </div>
+                    </li>
+                    </ul>
+            </div>
+            <!-- //공장FAQ -->
+            <!-- 공장 견학 일정 확인하기 -->
+            <div class="sub_confirm_wrap factory_date_wrap">
+                <div class="sub_txt_wrap">
+                    <h2 class="sub_tit">공장견학 신청</h2>
+                    <p>공장견학 신청을 원하시면,<br>
+                        아래 버튼을 눌러서 간단하게<br>
+                        신청 접수가 가능합니다</p>
+                    <a href="#" class="btn_schedule">신청하기</a>
+                </div>
+            </div>
+            <!-- //공장 견학 일정 확인하기 -->
+        </div>
+        <footer id="footer">
+            <ul class="sns_list">
+                <li class="sns_naver"><a href="https://blog.naver.com/nongshimblog" target="_blank">네이버</a></li>
+                <li class="sns_insta"><a href="https://www.instagram.com/nongshim/?hl=ko" target="_blank">인스타그램</a></li>
+                <li class="sns_youtube"><a href="https://www.youtube.com/user/nongshimPR?sub_confirmation=1" target="_blank">유튜브</a></li>
+                <li class="sns_facebook"><a href="https://ko-kr.facebook.com/nongshim/" target="_blank">페이스북</a></li>
+            </ul>
+            <div class="footer_link">
+                <ul class="top_link">
+                    <li><a href="#">찾아오시는 길</a></li>
+                    <li><a href="#">윤리경영</a></li>
+                    <li><a href="#" class="green">개인정보처리방침</a></li>
+                </ul>
+                <ul class="bottom_link">
+                    <li><a href="#">이메일무단수집거부</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">사이트맵</a></li>
+                </ul>
+            </div>
+            <address>
+                <span>서울특별시 동작구 여의대방로 112 (신대방동)</span>
+                <span>대표이사: 박준</span><br>
+                <span>대표전화 02.820.7114</span>
+                <span>고객센터 080.023.5181</span><br>
+                <span>© NONGSHIM CO.,LTD. ALL RIGHTS RESERVED.</span>
+            </address>
+            <div class="family_site">
+                <a href="#">패밀리 사이트</a>
+                <ul class="fs_list">
+                    <li class="fs_group">그룹사</li>
+                    <li><a href="#">농심홀딩스</a></li>
+                    <li><a href="#">농심엔지니어링</a></li>
+                    <li><a href="#">농심개발</a></li>
+                    <li><a href="#">율촌화학</a></li>
+                    <li><a href="#">메가마트</a></li>
+                    <li><a href="#">태경농산</a></li>
+                    <li><a href="#">NDS</a></li>
+                    <li><a href="#">농심기획</a></li>
+                    <li><a href="#">호텔농심</a></li>
+                    <li><a href="#">농심미분</a></li>
+                    <li><a href="#">율촌재단</a></li>
+                    <li><a href="#">농심미국</a></li>
+                    <li><a href="#">농심중국</a></li>
+                    <li><a href="#">농심일본</a></li>
+                    <li class="fs_group">브랜드</li>
+                    <li><a href="#">새우깡</a></li>
+                    <li><a href="#">신라면</a></li>
+                    <li><a href="#">백산수</a></li>
+                    <li><a href="#">코코이찌방야</a></li>
+                    <li><a href="#">식문화연구</a></li>
+                    <li><a href="#">식문화전문도서관</a></li>
+                </ul>
+            </div>
+        </footer>
+        <div class="dimm"></div>
+    </div>
+</body>
+</html>
